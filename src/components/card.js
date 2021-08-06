@@ -61,7 +61,6 @@ const articleArray = []
 const cardsContainer = document.querySelector(`${selector}`)
 axios.get(`http://localhost:5000/api/articles`)
   .then(res => {
-    console.log(res.data.articles)
     Object.values(res.data.articles).forEach(val => {
       articleArray.push(val)
     })
